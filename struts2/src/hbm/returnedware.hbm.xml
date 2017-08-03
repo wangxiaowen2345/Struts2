@@ -1,0 +1,18 @@
+<hibernate-mapping>
+	<class name="com.haojie.pojo.ReturnedWare" table="returnedware">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="ordernumber" column="ordernumber" />
+		<property name="productnumber" column="productnumber" />
+		<property name="price" column="price" />
+		<property name="allprice" column="allprice" />
+		<property name="count" column="count" />
+		<property name="douser" column="douser" />
+		<property name="time" column="time" />
+		<property name="warehouse" column="warehouse" />
+		<property name="paytype" column="paytype" />
+		<property name="name" column="name" />
+		<property name="suppliers" column="suppliers" />
+	</class>
+</hibernate-mapping>  

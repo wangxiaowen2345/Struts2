@@ -1,0 +1,21 @@
+<hibernate-mapping>  
+<class name="com.haojie.pojo.User" table="user">  
+    <id name="id" column="id">  
+        <generator class="increment"/>  
+    </id>  
+    
+    <property name="name" column="name" />  
+    <property name="phone" column="phone" />  
+    <property name="address" column="address" />  
+    <property name="time" column="time" />  
+    <property name="usernum" column="usernum" /> 
+    <property name="expdate" column="expdate" />  
+    <property name="balance" column="balance" />  
+    <property name="payment" column="payment" /> 
+    <property name="douser" column="douser" /> 
+    <property name="kind" column="kind" />
+    <property name="carnum" column="carnum" />
+    <property name="models" column="models" />
+    <property name="isture" column="isture" />
+</class>  
+</hibernate-mapping>  

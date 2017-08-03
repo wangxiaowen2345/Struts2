@@ -1,0 +1,12 @@
+<hibernate-mapping>
+	<class name="com.haojie.pojo.OrderList" table="orderlist">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="number" column="number" />
+		<property name="price" column="price" />
+		<property name="count" column="count" />
+		<property name="productnumber" column="productnumber" />  
+	
+	</class>
+</hibernate-mapping>  

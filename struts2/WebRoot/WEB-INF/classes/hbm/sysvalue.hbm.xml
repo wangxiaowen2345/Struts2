@@ -1,0 +1,11 @@
+<hibernate-mapping>  
+<class name="com.haojie.pojo.SystemValue" table="systemvalue">  
+    <id name="id" column="id">  
+        <generator class="increment"/>  
+    </id>  
+    <property name="keyname" column="keyname" />  
+    <property name="vle" column="vle" />  
+    <property name="remark" column="remark" /> 
+    <property name="colid" column="colid" />   
+</class>  
+</hibernate-mapping>  

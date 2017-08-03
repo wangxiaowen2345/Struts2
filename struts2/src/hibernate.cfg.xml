@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/struts2hibernate</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+		<!--指定数据库使用的SQL方言-->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!--指定一个Transaction实例工厂类-->
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<!--
+			当show_sql属性为true时表示在程序运行时在控制台输出SQL语句，默认为false，建议在调试程序时设为true，发布程序之前再改为false,因为输出SQL语句会影响程序的运行速度
+		-->
+		<property name="show_sql">true</property>
+		<!--指定是否按照标准格式在控制台上输出SQL语句-->
+		<property name="format_sql">false</property>
+		<!--指定是否在SQL语句中输出便于调试的注释信息-->
+		<property name="use_sql_comments">false</property>
+
+
+		<mapping resource="hbm/admin.hbm.xml" />
+		<mapping resource="hbm/cashflow.hbm.xml" />
+		<mapping resource="hbm/sysvalue.hbm.xml" />
+		<mapping resource="hbm/adminnav.hbm.xml" />
+		<mapping resource="hbm/power.hbm.xml" />
+	    <mapping resource="hbm/buytype.hbm.xml" />
+		<mapping resource="hbm/pic.hbm.xml" />
+		<mapping resource="hbm/powerass.hbm.xml" />
+		<mapping resource="hbm/function.hbm.xml" />
+		<mapping resource="hbm/suppliers.hbm.xml" />
+		<mapping resource="hbm/department.hbm.xml" />
+		<mapping resource="hbm/purchase.hbm.xml" />
+		<mapping resource="hbm/warehouse.hbm.xml" />
+		<mapping resource="hbm/order.hbm.xml" />
+		<mapping resource="hbm/models.hbm.xml" />
+		<mapping resource="hbm/warerecord.hbm.xml" />
+		<mapping resource="hbm/wares.hbm.xml" />
+		<mapping resource="hbm/orderlist.hbm.xml" />
+		<mapping resource="hbm/car.hbm.xml" />
+		<mapping resource="hbm/fastcarlist.hbm.xml" />
+		<mapping resource="hbm/fastcarrecord.hbm.xml" />
+		<mapping resource="hbm/customer.hbm.xml" />
+		<mapping resource="hbm/user.hbm.xml" />
+		<mapping resource="hbm/repair.hbm.xml" />
+		<mapping resource="hbm/repairrecord.hbm.xml" />
+		<mapping resource="hbm/arrears.hbm.xml" />
+		<mapping resource="hbm/carwash.hbm.xml" />
+		<mapping resource="hbm/carwashrecord.hbm.xml" />
+		<mapping resource="hbm/returnedware.hbm.xml" />
+		<mapping resource="hbm/allot.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>  

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+	<!-- 设置该应用使用的解码集 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<!--  <constant name="struts.action.extension" value="coffcat" /> -->
+
+	<!-- 上传的全部图片的最大限制-->
+	<constant name="struts.multipart.maxSize" value="7000000000" />
+	<!-- 指定国际化资源文件的baseName为messageResource -->
+	<constant name="struts.custom.i18n.resources" value="messageResource" />
+	<!-- 临时存放文件的路径 -->
+	<constant name="struts.multipart.saveDir" value="d:/test" />
+	<package name="struts2" extends="json-default">
+
+
+
+
+		<action name="admin" class="com.haojie.net.AdminControlAction">
+
+
+			<!-- 页面部分 -->
+			<result name="success">/admin/main.jsp</result>
+			<result name="fail">/admin/adminLogin.jsp</result>
+			<result name="nopower">/admin/nopower.jsp</result>
+			<result name="error">/admin/error.jsp</result>
+			<result name="usermanagement">/admin/function/usermanagement.jsp</result>
+			<result name="powermanager">/admin/function/powermanager.jsp</result>
+			<result name="systemannomenanager">/admin/function/systemannomenanager.jsp</result>
+			<result name="suppliersmanager">/admin/function/suppliersmanager.jsp</result>
+			<result name="powermanagement">/admin/function/powermanagement.jsp</result>
+			<result name="warehousemanagement">/admin/function/warehousemanagement.jsp</result>
+			<result name="departmentmanagement">/admin/function/departmentmanagement.jsp</result>
+			<result name="ordermanagement">/admin/function/ordermanagement.jsp</result>
+			<result name="newordermanagement">/admin/function/newordermanagement.jsp</result>
+			<result name="subordermanagement">/admin/function/subordermanagement.jsp</result>
+			<result name="modelsmanagement">/admin/function/modelsmanagement.jsp</result>
+			<result name="buytype">/admin/function/buytype.jsp</result>
+			<result name="oneordermanagement">/admin/function/oneordermanagement.jsp</result>
+			<result name="enterwarehouse">/admin/function/enterware.jsp</result>
+			<result name="outwarehousemanagement">/admin/function/outwarehouse/outwarehousemanagement.jsp
+			</result>
+			<result name="outwarehousestepmanagement">/admin/function/outwarehouse/outwarehousestepmanagement.jsp
+			</result>
+			<result name="carmanagement">/admin/function/carmanagement.jsp</result>
+			<result name="selfcarmanagement">/admin/function/selfcarmanagement.jsp</result>
+			<result name="purchase">/admin/function/purchasemanagement.jsp</result>
+			<result name="cardtoaddvip">/admin/function/cardtoaddvip.jsp</result>
+			<result name="faststrat">/admin/function/faststrat.jsp</result>
+			<result name="selfmaintain">/admin/function/faststart/selfmaintain.jsp
+			</result>
+			<result name="viptomaintain">/admin/function/faststart/viptomaintain.jsp
+			</result>
+			<result name="foundmaintain">/admin/function/faststart/foundmaintain.jsp
+			</result>
+			<result name="repairing">/admin/function/faststart/repairing.jsp</result>
+			<result name="viplist">/admin/function/viplist.jsp</result>
+			<result name="losslist">/admin/function/losslist.jsp</result>
+			<result name="losscarwashlist">/admin/function/losscarwashlist.jsp</result>
+			<result name="deleterepairing">/admin/function/faststart/deleterepairing.jsp
+			</result>
+			<result name="repairinfo">/admin/function/faststart/repairinfo.jsp</result>
+			<result name="selectoutwaretype">/admin/function/outwarehouse/selectoutwaretype.jsp
+			</result>
+			<result name="outware">/admin/function/outwarehouse/outware.jsp</result>
+			<result name="repairrecord">/admin/function/repairrecord.jsp</result>
+			<result name="carrepairrecord">/admin/function/carrepairrecord.jsp</result>
+			<result name="fastcarrecord">/admin/function/fastcarrecord.jsp</result>
+			<result name="arrearslist">/admin/function/faststart/arrearslist.jsp
+			</result>
+			<result name="returnedlist1">/admin/function/faststart/returnedlist.jsp
+			</result>
+			<result name="payarrears">/admin/function/faststart/payarrears.jsp</result>
+			<result name="payreturned">/admin/function/faststart/payreturned.jsp
+			</result>
+			<result name="consumption">/admin/function/outwarehouse/consumption.jsp
+			</result>
+			<result name="printoneordermanagement">/admin/function/printoneordermanagement.jsp
+			</result>
+			<result name="outwaretable">/admin/function/outwaretable.jsp</result>
+			<result name="ordermanagerlack">/admin/function/printoneordermanagementlack.jsp
+			</result>
+			<result name="outwarelist">/admin/function/outwarelist.jsp</result>
+			<result name="viprecharge">/admin/function/viprecharge.jsp</result>
+			<result name="selectproduct">/admin/function/inputproductnum.jsp</result>
+			<result name="selectpronum">/admin/function/productinfo.jsp</result>
+			<result name="caretoaddcarwash">/admin/function/caretoaddcarwash.jsp</result>
+			<result name="carwashlist">/admin/function/carwashlist.jsp</result>
+			<result name="carwashconsumer">/admin/function/carwashconsumer.jsp</result>
+			<result name="carwashrecharge">/admin/function/carwashrecharge.jsp</result>
+			<result name="privatecarmanegement">/admin/function/privatecarmanegement.jsp</result>
+			<result name="publiccarmanagement">/admin/function/publiccarmanagement.jsp</result>
+			<result name="returnedware">/admin/function/selectwarehouse.jsp</result>
+			<result name="returnedlist">/admin/function/consumption.jsp</result>
+			<result name="selectware">/admin/function/selectware.jsp</result>
+			<result name="inventory">/admin/function/inventorylist.jsp</result>
+			<result name="imgupload">/admin/function/imgupload.jsp</result>
+			<result name="employeeout">/admin/function/employeeout.jsp</result>
+			<result name="returnedwareinfo">/admin/function/returnedwareinfo.jsp</result>
+			<result name="outlist">/admin/function/outlist.jsp</result>
+			<result name="warelist">/admin/function/warelist.jsp</result>
+			<result name="allotwarehouselist">/admin/function/allotwarehouselist.jsp</result>
+			<result name="allotlist">/admin/function/allotlist.jsp</result>
+
+			<!-- JSON部分 -->
+			<result name="updatafastcar" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="imguploadaction" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="selectadminuserbyid" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="smsramdomresetpassword" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="adminrepass" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addsuppliers" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="powerfunctionbypowerid" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addpower" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updatepower" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updateadmin" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addadmin" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addwarehouse" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="adddepartment" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updatewarehouse" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updatedepartment" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addmodels" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updatemodels" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addwares" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastwares" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addbuytype" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updatebuytype" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addorder" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="SelectOrderListByNumberOrderByTimeDesc" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="selectcarbyid" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addcar" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updatecar" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addvip" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastcar" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastviplist" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastsup" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastorder" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addrepair" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fasttime" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fasttime1" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastordertime" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastordertime1" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="postoutware" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="revokeoutware" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="repairedlist" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastrepairtime" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastrepairtime1" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastrepair" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addartificialrepair" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="payrepairorder" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="payreturned1" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="carrepairedrecord" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="postoutwarebydouser" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="getonesupplier" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="deleterepairtext" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="recharge" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addcarwash" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="carwashrechargerecord" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastoutwarelist" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastcarwashlist" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="revoke" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="swipingcard" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addfastcar" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="selectfastcarbyid" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastfastcar" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastfastcarone" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addreturned" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastreturned" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastreturnedtime1" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastreturnedtime" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="addpurchase" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updateauditor" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastpurchase" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastpurchastime" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastpurchastime1" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastinventory" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="supplierbyid" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updatesuppliers" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="updatefastcarrecord" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="deletecar" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="deletepic" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="deletecaruser" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastconsumption" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="deleteoneorder" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="loss" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="losscarwash" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastuserloss" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastcarwashloss" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="rollout" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="fastallot" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="berevokeoutware" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="payinforeturned" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+			<result name="delall" type="json">
+				<param name="root">ResultJson</param>
+			</result>
+		</action>
+
+		<action name="fileUpload" class="com.haojie.net.FileUploadAction">
+			<!-- 限制图片的格式和图片的大小 -->
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">
+					image/bmp,image/png,image/gif,image/jpeg,image/pjpeg  
+                </param>
+				<param name="maximumSize">1000000000</param>
+			</interceptor-ref>
+			<!-- 默认的拦截器，必须要写 -->
+			<interceptor-ref name="defaultStack" />
+			<result name="input"> /admin/function/imgupload.jsp</result>
+			<result name="success">/admin/function/showUpload.jsp</result>
+
+		</action>
+
+		<action name="exportExcel" class="com.haojie.net.ExcelExportAction"
+			method="exportExcel">
+			<result name="success" type="stream">
+				<!-- 下载文件的类型，如果你不知道是什么格式，可以去 tomcat\conf\web.xml下找 -->
+				<param name="contentType">application/vnd.ms-excel</param>
+				<!-- 返回流 excelStream为action中的流变量名称 -->
+				<param name="inputName">excelStream</param>
+				<!--
+					attachment 这个位置的参数挺特殊的，可以设置成下载时，是否出现个下载提示框，或者直接下载之类的。
+					fileName指定生成的文件名字(适合动态生成文件名，比如做报表时，一般都要说是几月的统计数据之类)为action中变量
+				-->
+				<param name="contentDisposition">attachment;filename=${excelFileName}</param>
+				<param name="bufferSize">102400</param>
+			</result>
+		</action>
+
+		<!--
+			<action name="Upload" method="DeletePic"
+			class="com.haojie.net.FileUploadAction">
+		-->
+		<!--		 <interceptor-ref name="defaultStack" /> -->
+		<!--
+			<result name="success" >/admin/function/imgupload.jsp</result>
+		-->
+		<!--	    </action>-->
+
+		<!-- Add actions here -->
+	</package>
+
+	<!-- Add packages here -->
+
+</struts>

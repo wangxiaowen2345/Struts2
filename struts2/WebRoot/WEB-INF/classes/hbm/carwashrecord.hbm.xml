@@ -1,0 +1,15 @@
+<hibernate-mapping>
+	<class name="com.haojie.pojo.CarWashRecord" table="carwashrecord">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="number" column="number" />
+		<property name="name" column="name" />
+		<property name="dotype" column="dotype" />
+		<property name="outprice" column="outprice" />
+		<property name="time" column="time" />
+		<property name="payment" column="payment" />
+		<property name="douser" column="douser" />
+		<property name="residuedegree" column="residuedegree" />
+	</class>
+</hibernate-mapping>  

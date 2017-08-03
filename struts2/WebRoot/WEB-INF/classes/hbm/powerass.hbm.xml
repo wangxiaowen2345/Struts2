@@ -1,0 +1,9 @@
+<hibernate-mapping>
+	<class name="com.haojie.pojo.PowerAss" table="powerass">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="powerid" column="powerid" />
+		<property name="functionid" column="functionid" />
+	</class>
+</hibernate-mapping>  

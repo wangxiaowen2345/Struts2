@@ -1,0 +1,16 @@
+<hibernate-mapping>
+	<class name="com.haojie.pojo.RepairRecord" table="repairrecord">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="repairnum" column="repairnum" />
+		<property name="type" column="type" />
+		<property name="amount" column="amount" />
+		<property name="wrid" column="wrid" />
+		<property name="total" column="total" />
+		<property name="time" column="time" />
+		<property name="repairtext" column="repairtext" />
+		<property name="douser" column="douser" />
+		
+	</class>
+</hibernate-mapping>  

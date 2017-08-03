@@ -1,0 +1,18 @@
+<hibernate-mapping>
+	<class name="com.haojie.pojo.Cashflow" table="cashflow">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="type" column="type" />
+		<property name="number" column="number" />
+		<property name="ordertype" column="ordertype" />
+		<property name="douser" column="douser" />
+		<property name="paytype" column="paytype" />
+		<property name="istrue" column="istrue" />
+		<property name="time" column="time" />
+		<property name="total" column="total" />
+		<property name="reallytotal" column="reallytotal" />
+		<property name="payuser" column="payuser" />
+		<property name="fid" column="fid" />
+	</class>
+</hibernate-mapping>  
